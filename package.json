@@ -1,0 +1,30 @@
+{
+  "name": "starkmall",
+  "version": "1.0.0",
+  "description": "...The team is building a StarkMall Marketplace where all people in Blockchain & especially StarkNet ecosystem can interact with the StarkNet swag and merchandise to buy or sell the real world products of which they buy and sell orders will run under smart contract execution developed in Cairo language. Member can also choose to tokenize and turn them to nfts and sell or trade for crypto.",
+  "main": "index.js",
+  "scripts": {
+    "create-account": "poetry run npx hardhat run scripts/createAccount.ts",
+    "deploy-nft": "poetry run npx hardhat run scripts/deployNFT.ts",
+    "set-metadata": "poetry run npx hardhat run scripts/setMetadata.ts",
+    "mint-nfts": "poetry run npx hardhat run scripts/mintNFTs.ts",
+    "add-minter": "poetry run npx hardhat run scripts/grantMinterRole.ts",
+    "add-burner": "poetry run npx hardhat run scripts/grantBurnerRole.ts",
+    "setup": "npm install && poetry install && poetry run npx hardhat starknet-compile",
+    "test": "poetry run npx hardhat test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^10.0.0",
+    "hardhat": "^2.19.0",
+    "mocha": "^10.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@shardlabs/starknet-hardhat-plugin": "^0.6.6",
+    "dotenv": "^16.3.1",
+    "tsc": "^2.0.4"
+  }
+}
